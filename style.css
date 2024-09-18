@@ -19,6 +19,19 @@ body {
 	overflow: hidden;
 }
 
+
+
+
+@keyframes spin{
+	
+	
+	.Portfolio-content{
+		transform: rotate(360deg);
+	}
+}
+
+
+
 h1{
 	font-family: myFont;
 	text-align: center;
@@ -66,26 +79,58 @@ h1{
 -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
-#popup{
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	width: 100vw;
-	height: 100vh;
-	background: rgba(0,0,0,0.75);
-	display: none;
+#popup {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    display: none;
 }
 
-#popup .popup-content{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	width: 400px;
-	padding: 10px 40px;
-	background: rgba(0,0,0,0.0);
-	color: teal;
+.popup-blur {
+    filter: blur(5px); /* Adjust the blur amount as needed */
+    /*transition: filter 0.3s ease;  Smooth transition */
 }
+
+
+#popup .popup-content {
+    position: relative; /* Make the popup content relative */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 10px 40px;
+    background: rgba(0, 0, 0, 0.0);
+    color: teal;
+}
+
+.loader {
+    position: absolute; /* Position loader absolutely within popup content */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border: 12px solid #e3e3e3;
+    border-right-color: teal;
+    border-radius: 50%;
+    animation: spin 3s ease infinite; /* Spin animation */
+    display: none; /* Start hidden */
+    filter: none; /* Ensure loader isn't blurred */
+    z-index: 10; /* Bring loader above blurred content */
+}
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg); /* Start rotation */
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg); /* End rotation */
+    }
+}
+
+
 
 #popup a.close-popup {
 	position: absolute;
