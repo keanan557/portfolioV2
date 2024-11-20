@@ -1,3 +1,4 @@
+/* universal styling */
 *{
 	margin: 0;
 	padding: 0;
@@ -5,11 +6,13 @@
 	font-family: myFont;
 }
 
+/* pixel font */
 @font-face{
 	font-family: myFont;
 	src:url(font/pixel.ttf);
 }
 
+/* body */
 body {
 	background-image: url('images/background.gif');
 	background-repeat: no-repeat;
@@ -19,6 +22,12 @@ body {
 	overflow: hidden;
 }
 
+/* heading */
+.about-text{
+	font-size: 28px;
+}
+
+/* work */
 .Portfolio-content{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -30,10 +39,6 @@ body {
 
 .portfolio{
 	overflow-y: scroll;
-}
-
-.about-text{
-	font-size: 28px;
 }
 
 /* @keyframes spin{
