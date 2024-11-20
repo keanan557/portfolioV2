@@ -19,18 +19,28 @@ body {
 	overflow: hidden;
 }
 
+.Portfolio-content{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items: center;
+	max-width: 100%;
+	max-height:100vh;
+	gap: 1rem;
+}
 
+.portfolio{
+	overflow-y: scroll;
+}
 
+.about-text{
+	font-size: 28px;
+}
 
-@keyframes spin{
-	
-	
+/* @keyframes spin{
 	.Portfolio-content{
 		transform: rotate(360deg);
 	}
-}
-
-
+} */
 
 h1{
 	font-family: myFont;
@@ -60,13 +70,12 @@ h1{
 /*popups*/
 .navbar svg:hover{
 	transform: scale(1.2);
-	
 }
 
 .navbar svg{
 	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 .socials svg:hover{
@@ -75,8 +84,8 @@ h1{
 
 .socials svg{
 	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 #popup {
@@ -93,7 +102,6 @@ h1{
     filter: blur(5px); /* Adjust the blur amount as needed */
     /*transition: filter 0.3s ease;  Smooth transition */
 }
-
 
 #popup .popup-content {
     position: relative; /* Make the popup content relative */
@@ -130,8 +138,6 @@ h1{
     }
 }
 
-
-
 #popup a.close-popup {
 	position: absolute;
 	top: -10px;
@@ -157,29 +163,11 @@ h1{
 }
 
 #popup2 .popup-content2{
-	
 	background: rgba(0,0,0,0.0);
 	color: teal;
-	//border: 2px solid red;
 	margin-top: 50px;
 	max-width: 100%;
 }
-
-.Portfolio-content{
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	justify-items: center;
-	//border: 2px solid red;
-	max-width: 100%;
-	max-height:100vh;
-	
-}
-
-.portfolio{
-	overflow-y: scroll;
-	
-}
-
 
 .row img{
 	height: 150px;
@@ -188,9 +176,9 @@ h1{
 	border: 5px solid teal;
 }
 
-.row{
-	//border: 2px solid red;
-}
+/* .row{
+	
+} */
 
 #popup2 a.close-popup2 {
 	position: absolute;
@@ -206,11 +194,9 @@ h1{
 	display: block;
 }
 
-
-
 svg{
-	width: 80px;
-	height:80px;
+	width: 90px;
+	height: 90px;
 	border-radius: 50%;
 }
 
@@ -230,8 +216,11 @@ ul{
 	max-width: 100%;
 }
 
-
-
+.socials ul{
+	display: grid;
+	grid-template-columns: repeat(1,1fr);
+	gap: 2.5rem;
+}
 
 .socials .behance{
 	color: blue;
